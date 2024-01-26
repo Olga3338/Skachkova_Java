@@ -1,4 +1,4 @@
-package metrtest;
+package secondtest;
 
 import java.util.Scanner;
 
