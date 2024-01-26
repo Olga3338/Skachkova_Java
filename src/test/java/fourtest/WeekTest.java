@@ -1,4 +1,4 @@
-package weektest;
+package fourtest;
 
 import java.util.ArrayList;
 public class WeekTest {
