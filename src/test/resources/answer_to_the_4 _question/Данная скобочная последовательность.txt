@@ -1,0 +1,34 @@
+Данная скобочная последовательность: [((())()(())]] - не верна, потому что в ней больше открывающих скобок,чем закрывающих, + одна лишняя закрывающая, есть определенный метод, который выясняет правильную последовательность.
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main t
+public static void main (String[] args) {
+isValidBrackets ( bracketString: "");
+
+import java.util.Map;
+
+private static boolear isValidBrackets (String bracketString) {
+
+Map<Character, Character> brackets = new HashMap>;
+brackets-put (k: ')', v. '('); brackets-put (k:']', v: '[');
+brackets-put(k 'J', v: ' (');
+
+Deque<Character> stack = new LinkedList>);
+for (Character C : bracketString.toCharArray)) {
+if (brackets.containsValue(c)) { 
+stack-push (c) ;
+
+)else if (brackets.containsKey(c)) {
+if (stack.isEmpty() || stack. pop() I= brackets•get(c)) {
+return false; 
+}
+}
+}
+}
+}
+
+Есть алгоритмизированный подход в решении задачи на правильную скобочную последовательность, и в нем вводится такое понятие, как стек (stack), в котором мы, при движении по строке слева направо, «кладём» каждую открывающую скобку, и «забираем» по одной открывающей скобке, если нам по ходу движения по строке встречаются закрывающие скобки.
+
+Таким образом, правильная скобочная последовательность для указанной последовательности выше, будет выглядеть так: [((()))(())].
